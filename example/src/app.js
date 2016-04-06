@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var AutosizeInput = require('react-input-autosize');
+var AutosizeInput = require('../../lib/AutosizeInput');
+require('./example.less');
 
 var App = React.createClass({
 	getInitialState: function() {
@@ -43,4 +44,24 @@ var App = React.createClass({
 	}
 });
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const Wrapper = () => (
+  <div className="container">
+		<h1>React Autosize Input</h1>
+		<h2><a href="http://github.com/JedWatson/react-input-autosize">View project on GitHub</a></h2>
+		<form>
+		  <App />
+		</form>
+		<div className="hint">
+			Type in the text fields above to test the auto-size input.
+		</div>
+		<div className="footer">
+			Copyright &copy; Jed Watson 2014. MIT Licensed.
+		</div>
+	</div>
+);
+
+const appRoot = document.createElement('div');
+
+appRoot.id = 'app';
+document.body.appendChild(appRoot);
+ReactDOM.render(<Wrapper />, appRoot);

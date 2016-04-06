@@ -12,16 +12,10 @@ To run the examples locally, run:
 
 ```
 npm install
-gulp dev
+npm start
 ```
 
-Then open [localhost:8000](http://localhost:8000) in a browser. This will also watch for file changes and rebuild the examples (includes live reload).
-
-To just build the examples without the dev server or watch tasks, instead run:
-
-```
-gulp build-examples
-```
+Then open [localhost:8080](http://localhost:8080) in a browser. This will also watch for file changes and rebuild the examples (includes live reload).
 
 
 ## Installation
